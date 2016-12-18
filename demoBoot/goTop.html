@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <style>
+    body{
+    	height:2000px;
+    }
+		.go-top {
+		    background: url("images/2.jpg") no-repeat;
+		    background-size:cover; 
+		    bottom: 5%;
+		    display: none;
+		    height: 100px;
+		    position: fixed;
+		    right: 5%;
+		    text-align: center;
+		    width: 100px;
+		}
+		.go-top:hover {
+			background: url("images/4.jpg") no-repeat;
+		    background-size:cover; 
+		    
+		}
+
+    </style>
+</head>    
+<body>
+	<a href="#header" class='go-top' id='goTop'>
+   	 	<span class="go-top-inner"></span>
+	</a>
+
+
+	<script src='js/jquery-1.11.1.js'></script>
+	<script>
+
+	<!-- 页面回顶 -->
+	var gotop = $('#goTop');
+	gotop.click(function() {　　
+	    $("html body").animate({ scrollTop: 0 }, 200);　　
+	    return false;
+	});
+	$(window).scroll(function() {
+	    if (gotop.offset().top > window.innerHeight) {　　
+	        gotop.show();
+	    }　　　
+	    else {　　
+	        gotop.hide();
+	    }　　
+	})
+	</script>
+
+</body>
+	
+</html>
+
+
